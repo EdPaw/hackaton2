@@ -24,6 +24,6 @@ def generate_mails(dicty, due_date, total_tasks):
                 success = 0
 
     if success == 1:
-        print("Success. Files generatedd.")
+        print("Success. Files generated.")
     else:
         print("This filename already exists. Please check your files and try again.")

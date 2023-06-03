@@ -7,7 +7,7 @@ import csv
 def is_csv_file(file_path):
     file_name, file_extension = os.path.splitext(file_path)
     if not file_path:
-        raise FileNotFoundError("No file selectedd")
+        raise FileNotFoundError("No file selected")
     if file_extension.lower() != '.csv':
         raise TypeError("Wrong file type")
 

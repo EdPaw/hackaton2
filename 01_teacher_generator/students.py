@@ -19,6 +19,6 @@ def add_students_to_dict(file_path):
 
                 students_info[student_id] = [class_nr, name, surname, missing_tasks, grade]
     except ValueError as e:
-        print(f"\033[3mYour file has wrong structure. Correct it before passing it to this programm. {e}\033[0m")
+        print(f"\033[3mYour file has wrong structure. Correct it before passing it to this program. {e}\033[0m")
 
     return students_info

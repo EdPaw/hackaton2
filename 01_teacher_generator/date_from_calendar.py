@@ -16,7 +16,7 @@ def due_date():
     cal = Calendar(root)
     cal.pack()
 
-    button = tk.Button(root, text="Select Due Dat", command=get_selected_date)
+    button = tk.Button(root, text="Select Due Date", command=get_selected_date)
     button.pack()
 
     root.mainloop()
