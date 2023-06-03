@@ -23,7 +23,7 @@ def main():
         \033[1m name\033[0m -> str
         \033[1m surname\033[0m -> str
         \033[1m missing_tasks\033[0m -> int
-        \033[1m grade\033[0m -> float or str 'absentd'
+        \033[1m grade\033[0m -> float or str 'absent'
           """)
 
     file_path = f.check_if_file_correct()
