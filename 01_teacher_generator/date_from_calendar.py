@@ -1,27 +1,24 @@
 import tkinter as tk
-from tkinter import ttk
 from tkcalendar import Calendar
 
 
 def due_date():
+    selected_date = None
+
+    def get_selected_date():
+        nonlocal selected_date
+        selected_date = cal.get_date()
+        root.quit()
+
     root = tk.Tk()
     root.title("Due Date Selector")
 
-    #function which is invoked after pressing "Select Date" button
-    def get_selected_date():
-        selected_date = cal.get_date()
-        print("Due Date:", selected_date)
-        #closing the window
-        root.destroy()
-
     cal = Calendar(root)
-    #calendar widget in main window
     cal.pack()
 
-    #button will invoke the get_selected_date() function after click
-    button = ttk.Button(root, text="Select Due Date", command=get_selected_date)
-    #button in main window
+    button = tk.Button(root, text="Select Due Date", command=get_selected_date)
     button.pack()
 
-    #start main event loop
     root.mainloop()
+
+    return selected_date

@@ -15,7 +15,7 @@ def add_students_to_dict(file_path):
                 name = str(row[2])
                 surname = str(row[3])
                 missing_tasks = int(row[4])
-                grade = float(row[5])
+                grade = float(1 if row[5].upper() == 'ABSENT' else row[5])
 
                 students_info[student_id] = [class_nr, name, surname, missing_tasks, grade]
     except ValueError as e:
